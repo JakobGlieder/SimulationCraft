@@ -32,5 +32,5 @@ function updatePlayerList() {
 // Call the function immediately to fetch the initial player list
 updatePlayerList();
 
-// Set an interval to refresh the player list every 5 seconds (5000 milliseconds)
-setInterval(updatePlayerList, 5000);
+// Set an interval to refresh the player list every 30 seconds (30000 milliseconds)
+setInterval(updatePlayerList, 30000);
