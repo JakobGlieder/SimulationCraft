@@ -61,6 +61,9 @@ footer {
     transform: translateY(-50%);
     color: #ffffff;
     font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.7); /* Add this line for the black transparent box */
+    padding: 20px; /* Add this line for padding inside the box */
+    border-radius: 5px; /* Add this line for rounded corners */
 }
 
 .player-list {
