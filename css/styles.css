@@ -53,3 +53,17 @@ footer {
 .footer-text a:hover {
     text-decoration: underline;
 }
+
+.online-players {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.player-list {
+    list-style-type: none;
+    padding: 0;
+}
