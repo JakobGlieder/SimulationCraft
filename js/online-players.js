@@ -1,16 +1,19 @@
 const serverDomain = 'SimulationCraft.net';
-const ping = new MCPing(serverDomain, 25565);
 
-ping.ping((err, response) => {
-    if (err) {
-        console.error('Error fetching server data:', err);
+fetch(`https://api.mcsrvstat.us/2/${serverDomain}`)
+  .then(response => response.json())
+  .then(data => {
+    if (data.online) {
+      const playerList = document.querySelector('.player-list');
+      data.players.list.forEach(player => {
+        const listItem = document.createElement('li');
+        listItem.textContent = player;
+        playerList.appendChild(listItem);
+      });
     } else {
-        const playerList = document.querySelector('.player-list');
-
-        response.players.sample.forEach(player => {
-            const listItem = document.createElement('li');
-            listItem.textContent = player.name;
-            playerList.appendChild(listItem);
-        });
+      console.error('Server is offline');
     }
-});
+  })
+  .catch(err => {
+    console.error('Error fetching online players:', err);
+  });
