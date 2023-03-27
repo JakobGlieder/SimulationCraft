@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -25%;
+}
+
+.title {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
