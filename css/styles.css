@@ -1,103 +1,77 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-image: url("../images/Background.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('../images/Background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.container {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    top: -25%;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 80vh;
-    border-radius: 5px;
-}
-
-.title {
-    font-size: 48px;
-    color: #ffffff;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px 0;
-    text-align: center;
+h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 30px;
 }
 
 .footer-text {
-    font-size: 14px;
-    color: #ffffff;
-    margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
 }
 
-.footer-text a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer-text a:hover {
-    text-decoration: underline;
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
 }
 
 .online-players {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    color: #ffffff;
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.7); /* Add this line for the black transparent box */
-    padding: 20px; /* Add this line for padding inside the box */
-    border-radius: 5px; /* Add this line for rounded corners */
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.player-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (tablets, 600px and up) */
 @media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 36px;
+    padding-top: 50px;
+  }
+
+  .footer-text {
+    font-size: 16px;
+  }
+
   .online-players {
     font-size: 16px;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .online-players {
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .footer-text {
     font-size: 18px;
   }
-}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
   .online-players {
-    font-size: 20px;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .online-players {
-    font-size: 22px;
+    font-size: 18px;
+    left: auto;
+    right: 5%;
   }
 }
