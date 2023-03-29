@@ -5,8 +5,8 @@ async function loadMessageData(file) {
 }
 
 async function fetchMessageFiles() {
-  const repoOwner = 'your-github-username';
-  const repoName = 'your-repo-name';
+  const repoOwner = 'JakobGlieder';
+  const repoName = 'SimulationCraft';
   const apiResponse = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/discord%20messages`);
   const files = await apiResponse.json();
   return files.filter((file) => file.name.endsWith('.json')).map((file) => file.name);
