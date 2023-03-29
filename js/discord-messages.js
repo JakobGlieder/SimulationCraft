@@ -19,7 +19,7 @@ async function displayMessages() {
   for (const file of files) {
     const messageData = await loadMessageData(file);
     const button = document.createElement('button');
-    button.textContent = `Send "${messageData[0].title}" (and others)`;
+    button.textContent = fileName.replace('.json', '');
     button.onclick = () => sendMessage(messageData);
     messagesDiv.appendChild(button);
   }
