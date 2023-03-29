@@ -18,4 +18,4 @@
 ]
 
 
-fields can be omitted if not Required
+fields can be omitted if not Required. Note that a maximum of 10 embeds {} can be used in one message.
