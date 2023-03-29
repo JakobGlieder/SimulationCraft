@@ -60,6 +60,14 @@ footer {
   text-decoration: none;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 /* Medium devices (tablets, 600px and up) */
 @media only screen and (min-width: 600px) {
   h1 {
