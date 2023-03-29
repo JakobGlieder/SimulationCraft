@@ -1,18 +1,32 @@
 [
   {
-    "author": "Jakob127",
-    "authorUrl": "https://example.com/author1",
-    "authorImageUrl": "https://example.com/author1-image.png",
-    "title": "Title 1",
-    "description": "Description 1",
-    "imageUrl": "https://example.com/image1.png"
+    "title": "Burger",
+    "description": "Tasty Burger, better than McDonalds",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Burger.png"
   },
   {
-    "author": "Author 2",
-    "authorUrl": "https://example.com/author2",
-    "authorImageUrl": "https://example.com/author2-image.png",
-    "title": "Title 2",
-    "description": "Description 2",
-    "imageUrl": "https://example.com/image2.png"
+    "title": "Taco",
+    "description": "I personally don't like them, but I guess they are ok",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Taco.png"
+  },
+  {
+    "title": "Donut",
+    "description": "Spelled: D-O-N-U-T",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Donut.png"
+  },
+  {
+    "title": "Popcorn",
+    "description": "I can't think of anything good to write here, but the song is great.",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Popcorn.png"
+  },
+  {
+    "title": "Muffin",
+    "description": "The really good ones are all made from cookies!",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Muffin.png"
+  },
+  {
+    "title": "Mini Cake",
+    "description": "Finally available in a bakery near you! :D",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Mini_Cake.png"
   }
 ]
