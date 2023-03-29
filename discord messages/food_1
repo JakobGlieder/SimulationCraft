@@ -1,0 +1,18 @@
+[
+  {
+    "author": "Jakob127",
+    "authorUrl": "https://example.com/author1",
+    "authorImageUrl": "https://example.com/author1-image.png",
+    "title": "Title 1",
+    "description": "Description 1",
+    "imageUrl": "https://example.com/image1.png"
+  },
+  {
+    "author": "Author 2",
+    "authorUrl": "https://example.com/author2",
+    "authorImageUrl": "https://example.com/author2-image.png",
+    "title": "Title 2",
+    "description": "Description 2",
+    "imageUrl": "https://example.com/image2.png"
+  }
+]
