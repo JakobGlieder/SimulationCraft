@@ -68,6 +68,21 @@ footer {
   height: 100%;
 }
 
+.box {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.box:hover {
+  background-color: #ddd;
+}
+
+
 /* Medium devices (tablets, 600px and up) */
 @media only screen and (min-width: 600px) {
   h1 {
