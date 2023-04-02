@@ -69,14 +69,18 @@ footer {
 }
 
 .box {
-  background-color: #f1f1f1;
-  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 5px;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 10px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  margin: 20px;
 }
+
 
 .box:hover {
   background-color: #ddd;
