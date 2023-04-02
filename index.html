@@ -12,6 +12,9 @@
     <h1>SimulationCraft.net</h1>
   </header>
   <div class="content">
+    <div class="ip-box" onclick="copyIP()">
+      IP: SimulationCraft.net
+    </div>
     <div class="online-players">
       <strong>Online Players:</strong>
       <ul id="playerList">
@@ -26,5 +29,14 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/mc-ping-js@2.1.1/dist/mc-ping.min.js"></script>
   <script src="js/online-players.js"></script>
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText('SimulationCraft.net').then(function () {
+        alert('IP copied to clipboard!');
+      }, function (err) {
+        console.error('Failed to copy IP: ', err);
+      });
+    }
+  </script>
 </body>
 </html>
