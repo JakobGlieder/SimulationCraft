@@ -6,12 +6,12 @@
   {
     "title": "Step 1: Fermenting",
     "description": "1. Place Cauldron over a Fire or other heat source\n2. Fill it with water\n3. Add Ingredients with a rightclick\n4. Wait a few minutes while they ferment\n5. Fill in glass bottles\n\nBeer uses 6 wheat as ingredients and takes 8 minutes.\nYou will get Fermented Wheat that you can turn into Beer.\nYou can use a clock to see how long it has been fermenting.(rightclick)",
-    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/brewing/Fermenting.png"
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/brewing/Fermenting1.png"
   },
   {
     "title": "Step 2: Destilling",
     "description": "Beer does not need to be destilled.\n\n1. Put the bottle with ferment into a brewing stand\n2. Put glowstone dust as filter on top into the brewing stand (The filter will not be consumed)",
-    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/brewing/Destilling.png"
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/brewing/Destilling1.png"
   },
   {
     "title": "Step 3: Aging",
