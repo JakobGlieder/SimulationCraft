@@ -44,8 +44,6 @@ async function sendMessage(messageDataArray) {
     url: author.url || messageData.authorUrl,
     icon_url: author.icon_url || messageData.authorImageUrl,
   };
-    
-  const fixedDescription = messageData.description.replace(/\\n/g, '\n');
 
   return {
     author: fixedAuthor,
