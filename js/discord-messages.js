@@ -34,39 +34,62 @@ async function sendMessage(messageDataArray) {
   }
 
   const embeds = messageDataArray.map((messageData) => {
-    return {
-      author: {
-        name: messageData.author,
-        url: messageData.authorUrl,
-        icon_url: messageData.authorImageUrl,
-      },
-      title: messageData.title,
-      description: messageData.description,
-      image: {
-        url: messageData.imageUrl,
-      },
-    };
-  });
+  const author = messageData.author || {};
+  const fixedAuthor = {
+    name: author.name || messageData.author,
+    url: author.url || messageData.authorUrl,
+    icon_url: author.icon_url || messageData.authorImageUrl,
+  };
 
-  const data = { embeds };
+  return {
+    author: fixedAuthor,
+    title: messageData.title,
+    description: messageData.description,
+    image: {
+      url: messageData.imageUrl,
+    },
+  };
+});
 
-  try {
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
 
-    if (response.ok) {
-      console.log('Message sent successfully.');
-    } else {
-      console.error('Error sending message:', response.statusText);
+  const chunkSize = 10;
+  const embedChunks = [];
+  for (let i = 0; i < embeds.length; i += chunkSize) {
+    embedChunks.push(embeds.slice(i, i + chunkSize));
+  }
+
+  for (const chunk of embedChunks) {
+    const data = { embeds: chunk };
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log('Message sent successfully.');
+      } else {
+        console.error('Error sending message:', response.statusText);
+        const errorDetails = await response.json();
+        console.error('Error details:', errorDetails);
+
+        // Log problematic embed
+        if (errorDetails.embeds && errorDetails.embeds.length > 0) {
+          const errorIndex = parseInt(errorDetails.embeds[0], 10);
+          console.error('Problematic embed:', data.embeds[errorIndex]);
+        }
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
     }
-  } catch (error) {
-    console.error('Error sending message:', error);
   }
 }
+
+
+
 
 displayMessages();
