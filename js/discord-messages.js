@@ -67,7 +67,7 @@ async function sendMessage(messageDataArray) {
   const bufferTime = 2000; // Buffer time in milliseconds
   const estimatedTime = embedChunks.length * delayBetweenChunks + bufferTime;
 
-  alert(`Sending messages. This will take approximately ${estimatedTime / 1000} seconds.`);
+  alert(`Close this alert to start sending. Sending will take approximately ${estimatedTime / 1000} seconds.`);
 
   const startTime = Date.now();
 
