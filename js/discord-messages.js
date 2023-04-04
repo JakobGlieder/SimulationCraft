@@ -34,21 +34,23 @@ async function sendMessage(messageDataArray) {
   }
 
   const embeds = messageDataArray.map((messageData) => {
-    const fixedAuthor = {
-      name: messageData.author.name || messageData.author,
-      url: messageData.author.url || messageData.authorUrl,
-      icon_url: messageData.author.icon_url || messageData.authorImageUrl,
-    };
+  const author = messageData.author || {};
+  const fixedAuthor = {
+    name: author.name || messageData.author,
+    url: author.url || messageData.authorUrl,
+    icon_url: author.icon_url || messageData.authorImageUrl,
+  };
 
-    return {
-      author: fixedAuthor,
-      title: messageData.title,
-      description: messageData.description,
-      image: {
-        url: messageData.imageUrl,
-      },
-    };
-  });
+  return {
+    author: fixedAuthor,
+    title: messageData.title,
+    description: messageData.description,
+    image: {
+      url: messageData.imageUrl,
+    },
+  };
+});
+
 
   const chunkSize = 10;
   const embedChunks = [];
