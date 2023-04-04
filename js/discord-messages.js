@@ -48,14 +48,12 @@ async function sendMessage(messageDataArray) {
     };
   });
 
-  // Split embeds array into chunks of 10
   const chunkSize = 10;
   const embedChunks = [];
   for (let i = 0; i < embeds.length; i += chunkSize) {
     embedChunks.push(embeds.slice(i, i + chunkSize));
   }
 
-  // Send each chunk as a separate message
   for (const chunk of embedChunks) {
     const data = { embeds: chunk };
 
@@ -72,11 +70,15 @@ async function sendMessage(messageDataArray) {
         console.log('Message sent successfully.');
       } else {
         console.error('Error sending message:', response.statusText);
+        // Log additional error details
+        const errorDetails = await response.json();
+        console.error('Error details:', errorDetails);
       }
     } catch (error) {
       console.error('Error sending message:', error);
     }
   }
 }
+
 
 displayMessages();
