@@ -34,12 +34,14 @@ async function sendMessage(messageDataArray) {
   }
 
   const embeds = messageDataArray.map((messageData) => {
+    const fixedAuthor = {
+      name: messageData.author.name || messageData.author,
+      url: messageData.author.url || messageData.authorUrl,
+      icon_url: messageData.author.icon_url || messageData.authorImageUrl,
+    };
+
     return {
-      author: {
-        name: messageData.author,
-        url: messageData.authorUrl,
-        icon_url: messageData.authorImageUrl,
-      },
+      author: fixedAuthor,
       title: messageData.title,
       description: messageData.description,
       image: {
@@ -84,6 +86,7 @@ async function sendMessage(messageDataArray) {
     }
   }
 }
+
 
 
 
