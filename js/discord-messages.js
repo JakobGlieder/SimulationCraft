@@ -95,6 +95,7 @@ async function sendMessage(messageDataArray) {
           const errorIndex = parseInt(errorDetails.embeds[0], 10);
           console.error('Problematic embed:', data.embeds[errorIndex]);
         }
+      }
     } catch (error) {
       console.error('Error sending message:', error);
     }
