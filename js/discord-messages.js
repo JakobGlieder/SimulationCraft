@@ -110,3 +110,5 @@ async function sendMessage(messageDataArray) {
   // Show an alert when all messages have been sent
   alert(`All messages have been sent! It took ${timeTaken.toFixed(1)} seconds (Estimated: ${estimatedTimeInSeconds.toFixed(1)} seconds).`);
 }
+
+displayMessages();
