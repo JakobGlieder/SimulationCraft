@@ -48,24 +48,34 @@ async function sendMessage(messageDataArray) {
     };
   });
 
-  const data = { embeds };
+  // Split embeds array into chunks of 10
+  const chunkSize = 10;
+  const embedChunks = [];
+  for (let i = 0; i < embeds.length; i += chunkSize) {
+    embedChunks.push(embeds.slice(i, i + chunkSize));
+  }
 
-  try {
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+  // Send each chunk as a separate message
+  for (const chunk of embedChunks) {
+    const data = { embeds: chunk };
 
-    if (response.ok) {
-      console.log('Message sent successfully.');
-    } else {
-      console.error('Error sending message:', response.statusText);
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log('Message sent successfully.');
+      } else {
+        console.error('Error sending message:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
     }
-  } catch (error) {
-    console.error('Error sending message:', error);
   }
 }
 
