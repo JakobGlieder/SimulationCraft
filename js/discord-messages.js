@@ -63,7 +63,13 @@ async function sendMessage(messageDataArray) {
     embedChunks.push(embeds.slice(i, i + chunkSize));
   }
 
-  const delayBetweenChunks = 0; // Delay in milliseconds
+  const delayBetweenChunks = 500; // Delay in milliseconds
+  const bufferTime = 2000; // Buffer time in milliseconds
+  const estimatedTime = embedChunks.length * delayBetweenChunks + bufferTime;
+
+  alert(`Sending messages. This will take approximately ${estimatedTime / 1000} seconds.`);
+
+  const startTime = Date.now();
 
   for (const chunk of embedChunks) {
     const data = { embeds: chunk };
@@ -80,8 +86,15 @@ async function sendMessage(messageDataArray) {
       if (response.ok) {
         console.log('Message sent successfully.');
       } else {
-        // ... (error handling code, unchanged)
-      }
+        console.error('Error sending message:', response.statusText);
+        const errorDetails = await response.json();
+        console.error('Error details:', errorDetails);
+
+        // Log problematic embed
+        if (errorDetails.embeds && errorDetails.embeds.length > 0) {
+          const errorIndex = parseInt(errorDetails.embeds[0], 10);
+          console.error('Problematic embed:', data.embeds[errorIndex]);
+        }
     } catch (error) {
       console.error('Error sending message:', error);
     }
@@ -89,11 +102,10 @@ async function sendMessage(messageDataArray) {
     await delay(delayBetweenChunks); // Add the delay between sending chunks
   }
 
+  const endTime = Date.now();
+  const timeTaken = (endTime - startTime) / 1000;
+  const estimatedTimeInSeconds = estimatedTime / 1000;
+
   // Show an alert when all messages have been sent
-  alert('All messages have been sent!');
+  alert(`All messages have been sent! It took ${timeTaken.toFixed(1)} seconds (Estimated: ${estimatedTimeInSeconds.toFixed(1)} seconds).`);
 }
-
-
-
-
-displayMessages();
