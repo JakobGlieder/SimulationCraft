@@ -5,27 +5,21 @@
   },
   {
     "title": "Step 1: Fermenting",
-    "description": "1. Place Cauldron over a Fire or other heat source\n2. Fill it with water\n3. Add Ingredients with a rightclick\n4. Wait a few minutes while they ferment\n5. Fill in glass bottles",
-    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Taco.png"
+    "description": "1. Place Cauldron over a Fire or other heat source\n2. Fill it with water\n3. Add Ingredients with a rightclick\n4. Wait a few minutes while they ferment\n5. Fill in glass bottles\n\nBeer uses 6 wheat as ingredients and takes 8 minutes.\nYou will get Fermented Wheat that you can turn into Beer.\nYou can use a clock to see how long it has been fermenting.(rightclick)",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/brewing/Fermenting.png"
   },
   {
-    "title": "Donut",
-    "description": "Spelled: D-O-N-U-T",
-    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Donut.png"
+    "title": "Step 2: Destilling",
+    "description": "Beer does not need to be destilled.\n\n1. Put the bottle with ferment into the brewing stand\n2. Put glowstone dust as filter on top into the brewing stand (The filter will not be consumed)",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/brewing/Destilling.png"
   },
   {
-    "title": "Popcorn",
-    "description": "I can't think of anything good to write here, but the song is great.",
-    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Popcorn.png"
+    "title": "Step 3: Aging",
+    "description": "Use 8 wooden stairs to build a barrel shape.\nPlace a Sign on the lower right side and write \"Barrel\" in the upper Line:\n\n Beer takes 3 Minecraft days to age.\nYou will see the \"Fermented Wheat\" has changed to \"Beer\".",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/brewing/Aging.png"
   },
   {
-    "title": "Muffin",
-    "description": "The really good ones are all made from cookies!",
-    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Muffin.png"
-  },
-  {
-    "title": "Mini Cake",
-    "description": "Finally available in a bakery near you! :D",
-    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Mini_Cake.png"
+    "title": "More Drinks",
+    "description": "There are more drinks available to brew.\nSee https://github.com/DieReicheErethons/Brewery/wiki/Recipes for the Recipes"
   }
 ]
