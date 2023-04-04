@@ -70,15 +70,21 @@ async function sendMessage(messageDataArray) {
         console.log('Message sent successfully.');
       } else {
         console.error('Error sending message:', response.statusText);
-        // Log additional error details
         const errorDetails = await response.json();
         console.error('Error details:', errorDetails);
+
+        // Log problematic embed
+        if (errorDetails.embeds && errorDetails.embeds.length > 0) {
+          const errorIndex = parseInt(errorDetails.embeds[0], 10);
+          console.error('Problematic embed:', data.embeds[errorIndex]);
+        }
       }
     } catch (error) {
       console.error('Error sending message:', error);
     }
   }
 }
+
 
 
 displayMessages();
