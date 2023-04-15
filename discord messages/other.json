@@ -36,5 +36,9 @@
   {
     "title": "Citizenship",
     "description": "Use **/ar check Resident** to check your progress towards Resident.\nUse**/ar check Citizen** to check your progress towards citizenship"
+  },
+  {
+  "title": "Teleport and Home System",
+  "description": "Different ranks have various teleportation permissions:\n\n- **Everyone**:\n  - **/tpaccept** - Accept TP requests\n\n- **Residents**:\n  - **/sethome** - Set 1 home\n  - **/home** - Teleport to home\n\n- **Citizens**:\n  - **/sethome <home_name>** - Set 2 homes\n  - **/home <home_name>** - Teleport to home\n  - **/tpa** - Request to teleport to a player\n  - **/tpahere** - Request a player to teleport to you"
   }
 ]
