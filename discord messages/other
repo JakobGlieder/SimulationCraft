@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Cobble Crafting Table",
+    "description": "You can do it that way if you want!",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/other/Cobble_Crafting.png"
+  },
+  {
+    "title": "Diamonds on Campfire",
+    "description": "You can now put diamonds on campfires, and you'll even get something out of them!",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Diamonds_Campfire.png"
+  },
+  {
+    "title": "Edit signs",
+    "description": "You can edit signs by right-clicking them",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Editsign.png"
+  },
+  {
+    "title": "Locking",
+    "description": "You can lock chests and other things, or edit the locks settings, by sneaking + right-click",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/chest.png"
+  },
+  {
+    "title": "Elytra with Chestplate",
+    "description": "You can combine an Elytra and Chestplate by dropping them on top of an Armor-Stand. Drop it on a grindstone to seperate.",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Elytra_Chestplate.png"
+  },
+  {
+    "title": "Edit Armorstands",
+    "description": "You can edit armorstands by crafting a book with an armorstand",
+    "imageUrl": "https://www.simulationcraft.net/discord%20messages/images/Armorstand_Book.png"
+  },
+  {
+    "title": "Nether Portals",
+    "description": "Use the following commands to get coordinates for syncing up portals:\n**/trigger nc_inNether** (when you are in the nether)\n**/trigger nc_inOverworld** (when you are in the overworld)"
+  }
+]
