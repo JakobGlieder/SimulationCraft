@@ -32,5 +32,9 @@
   {
     "title": "Nether Portals",
     "description": "Use the following commands to get coordinates for syncing up portals:\n**/trigger nc_inNether** (when you are in the nether)\n**/trigger nc_inOverworld** (when you are in the overworld)"
+  },
+  {
+    "title": "Citizenship",
+    "description": "Use **/ar check Resident** to check your progress towards Resident.\nUse**/ar check Citizen** to check your progress towards citizenship"
   }
 ]
